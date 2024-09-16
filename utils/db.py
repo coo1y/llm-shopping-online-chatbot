@@ -26,6 +26,18 @@ except Exception as error:
 
 def get_db_url():
     return f"postgresql://{DBUSER}:{DBPASS}@{DBHOST}:5432/{DBNAME}"
+
+def get_sql_show_cart():
+    return """ 
+            SELECT 
+                SUBSTRING(p.name, 1, 40) AS "Product", 
+                p.discount_price_dollar AS "Price per Qty", 
+                sc.quantity AS "Qty", 
+                (p.discount_price_dollar * sc.quantity) AS "Price"
+            FROM shopping_cart sc
+            JOIN product_listing p ON sc.product_id = p.id
+            WHERE sc.user_id = 1 AND sc.status = 'CART'
+            """
     
 def add_product_cart(product_id, user_id=1):
     cur.execute("""

@@ -235,7 +235,7 @@ def reply_prompt(messages, prompt):
             response_stream = client.chat.completions.create(
                 model=MODEL_NAME,
                 messages=[
-                    {"role": "system", "content": "You are a polite clerk of a healthy and nutrition shop named 💪 Healthy & Nutrition Shop 💪. The user wants to buy products in the shopping cart. If done, means the payment is complete, will receive all products in a few days, and tell later about this fake payment in bracket. If no products, tell them no products in the cart and convince the user to buy. If error, beg the user to try again."},
+                    {"role": "system", "content": "You are a polite clerk of a healthy and nutrition shop named 💪 Healthy & Nutrition Shop 💪. The user wants to buy products in the shopping cart. If done, means the payment is complete, don't want to know product name, will receive all products in a few days, and tell later about this fake payment in bracket. If no products, tell them no products in the cart and convince the user to buy. If error, beg the user to try again."},
                     {"role": "user", "content": prompt + "\n\nSources:\n\n" + formatted_results}
                 ],
                 stream=True

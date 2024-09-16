@@ -114,16 +114,8 @@ with st.sidebar:
     st.markdown("<h2 style='text-align: center; color: black;'>🛒 Shopping Cart 🛒</h2>", unsafe_allow_html=True)
     db_url = db.get_db_url()
     conn = st.connection("postgresql", type="sql", url=db_url)
-    cart_1 = conn.query(""" 
-                            SELECT 
-                                SUBSTRING(p.name, 1, 40) AS "Product", 
-                                p.discount_price_dollar AS "Price per Qty", 
-                                sc.quantity AS "Qty", 
-                            (p.discount_price_dollar * sc.quantity) AS "Price"
-                            FROM shopping_cart sc
-                            JOIN product_listing p ON sc.product_id = p.id
-                            WHERE sc.user_id = 1 AND sc.status = 'CART'
-                        """)
+    sql_cart = db.get_sql_show_cart()
+    cart_1 = conn.query(sql_cart)
 
     if len(cart_1) > 0:
         st.dataframe(cart_1, hide_index=True)
