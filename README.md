@@ -1,6 +1,6 @@
-# LLM Chatbot for Online Shopping
+# LLM & RAG Chatbot for Online Shopping Website
 
-A Python-based chatbot application using a large language model (LLM) to enhance online shopping experiences. The chatbot is built with **Streamlit** for the user interface, **OpenAI** for natural language processing, and **PostgreSQL** as the database for storing product information and shopping cart.
+A Python-based chatbot application using a large language model (LLM) with retrieval augmented generation (RAG) to enhance online shopping experiences. The chatbot is built with **Streamlit** for the user interface, **OpenAI** for natural language processing, and **PostgreSQL** as the database for storing product information and shopping cart.
 
 ## Features
 
@@ -54,7 +54,7 @@ DBNAME=your_postgresql_database
 5. **Set up the PostgreSQL database**:
 - Ensure PostgreSQL is installed and running on your machine.
 - Ensure pgvector is installed after PostgreSQL (https://github.com/pgvector/pgvector)
-- The schemas and data are located in the database/ folder. You can run the SQL scripts to create the schemas and populate the data in the database.
+- The schemas and data are located in the `database/` folder. You can run the SQL scripts to create the schemas and populate the data in the database.
 
 ## Usage
 1. **Run the Streamlit app**:
