@@ -37,7 +37,8 @@ pip install -r requirements.txt
 ```
 
 4. **Set up environment variables**:
-```
+- Create a .env file in the root directory of the project and add the following variables:
+```.env
 # OPENAI
 OPENAI_KEY=your_openai_api_key
 OPENAI_MODEL=gpt-4o
