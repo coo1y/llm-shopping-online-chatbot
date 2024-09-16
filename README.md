@@ -54,7 +54,7 @@ DBNAME=your_postgresql_database
 5. **Set up the PostgreSQL database**:
 - Ensure PostgreSQL is installed and running on your machine.
 - Ensure pgvector is installed after PostgreSQL (https://github.com/pgvector/pgvector)
-- The schemas and data are in folder `database/`. You can execute the SQLs to generate the schemas and data on the database.
+- The schemas and data are located in the database/ folder. You can run the SQL scripts to create the schemas and populate the data in the database.
 
 ## Usage
 1. **Run the Streamlit app**:
