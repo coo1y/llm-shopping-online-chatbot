@@ -14,7 +14,7 @@ A Python-based chatbot application using a large language model (LLM) to enhance
 
 - **Python**: Core programming language.
 - **Streamlit**: Web framework for building interactive web apps.
-- **OpenAI API**: For leveraging the power of large language models (LLM).
+- **OpenAI API**: For leveraging the power of large language models (LLM) and retrieval augmented generation (RAG).
 - **PostgreSQL**: Relational database for storing product and user information.
 
 ## Installation
@@ -63,3 +63,6 @@ streamlit run app.py
 ```
 
 2. You should see the url (such as, `http://localhost:8501`) on the terminal. After accessing that link, you should see the chatbot interface where users can ask shopping-related questions and receive real-time responses from the LLM chatbot.
+
+## Demo
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/G5F04WKVtmI/0.jpg)](https://www.youtube.com/watch?v=G5F04WKVtmI)
