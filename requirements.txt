@@ -1,7 +1,5 @@
 openai
 python-dotenv
-langchain
-langchain-openai
 psycopg2==2.9.9
 pgvector==0.2.5
 SQLModel==0.0.16
